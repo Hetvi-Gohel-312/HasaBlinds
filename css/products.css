@@ -1,0 +1,138 @@
+/* ===== Fonts & Base ===== */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Playfair+Display:wght@700&display=swap');
+
+:root {
+  --primary-color: #4b0082;
+  --accent-color: #b57edc;
+  --hover-color: #9370db;
+  --bg-gradient: linear-gradient(135deg, #f9f7fb, #dcd6f7);
+  --text-dark: #333;
+  --text-light: #fff;
+}
+
+body {
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+  background: var(--bg-gradient);
+  color: var(--text-dark);
+}
+
+/* ===== Section ===== */
+h1 {
+  text-align: center;
+  font-family: 'Playfair Display', serif;
+  font-size: 2.5rem;
+  color: var(--primary-color);
+  margin: 2rem 0;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 2rem;
+  padding: 0 1rem;
+  margin: 0 1rem;
+}
+
+/* ===== Grid Item ===== */
+.grid-item {
+  background: #fff;
+  border-radius: 8px; /* Reduced the curve for less roundness */
+  box-shadow: 0 15px 30px rgba(75, 0, 130, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.grid-item:hover {
+  transform: scale(1.03);
+  box-shadow: 0 20px 40px rgba(75, 0, 130, 0.2);
+}
+
+.grid-item img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 8px 8px 0 0; /* Reduced the top curve */
+}
+
+/* ===== Product Info ===== */
+.grid-item h2 {
+  font-size: 1.4rem;
+  color: var(--primary-color);
+  font-family: 'Playfair Display', serif;
+  margin: 1rem;
+}
+
+.grid-item p {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: #555;
+  padding: 0 1rem 1rem 1rem;
+  text-align: justify; /* Justified the text */
+}
+
+/* ===== Responsive Media Query ===== */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 2rem;
+  }
+
+  .grid-container {
+    grid-template-columns: 1fr; /* Only one column on small screens */
+    padding: 0 1rem;
+  }
+
+  .grid-item {
+    padding: 1rem;
+  }
+
+  .grid-item img {
+    height: 180px;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  .grid-container {
+    grid-template-columns: repeat(2, 1fr); /* Two columns on medium screens */
+  }
+}
+
+
+/* Center the Go Back button */
+.go-back-container {
+  text-align: center;
+  margin-top: 50px;  /* Adds space between the products and the button */
+  margin-bottom: 50px; /* Adds space between the button and the footer */
+}
+
+/* Advanced styling for the Go Back button with purple theme */
+.go-back-btn {
+  background: linear-gradient(135deg, #8e44ad, #9b59b6); /* Purple gradient */
+  color: white;
+  padding: 15px 40px;
+  font-size: 18px;
+  border: none;
+  border-radius: 50px;  /* Rounded button */
+  text-transform: uppercase;  /* Uppercase text */
+  font-weight: bold;  /* Bold text */
+  letter-spacing: 1px;  /* Spaced-out letters */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1); /* Shadow for depth */
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease; /* Smooth transitions */
+  text-decoration: none;
+}
+
+.go-back-btn:hover {
+  background: linear-gradient(135deg, #9b59b6, #8e44ad);  /* Darker purple gradient on hover */
+  transform: translateY(-3px);  /* Slightly lift the button */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);  /* More pronounced shadow */
+}
+
+.go-back-btn:active {
+  transform: translateY(2px);  /* Button presses down when clicked */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);  /* Lighter shadow when pressed */
+}
+
+/* Ensure footer has enough space */
+footer {
+  padding-bottom: 100px;  /* Ensure enough space at the bottom for the button */
+}

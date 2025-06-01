@@ -1,0 +1,228 @@
+.container {
+  width: 85%;
+  max-width: 1200px;
+  margin: auto;
+  padding: 40px;
+  background: #fff;
+  border-radius: 15px;
+  box-shadow: 0 5px 20px rgba(75, 0, 130, 0.08);
+  text-align: center;
+}
+
+h1 {
+  font-size: 30px;
+  font-weight: bold;
+  color: #4b0082;
+  text-transform: uppercase;
+}
+
+h3 {
+  font-size: 26px;
+  color: #9370db;
+  text-transform: uppercase;
+}
+
+/* Contact Form */
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 12px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 16px;
+}
+
+/* Error Highlight */
+.contact-form input.error,
+.contact-form textarea.error {
+  border: 2px solid red;
+  background: #ffeeee;
+}
+
+.contact-form textarea {
+  resize: none;
+  height: 120px;
+}
+
+/* Input Focus Effect */
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border-color: #b57edc;
+  box-shadow: 0 0 10px rgba(181, 126, 220, 0.4);
+}
+
+/* Validation Message */
+.error-msg {
+  color: red;
+  font-size: 14px;
+  text-align: left;
+  margin-top: -8px;
+  display: none;
+}
+
+/* Character Counter */
+.char-counter {
+  text-align: right;
+  font-size: 14px;
+  color: #666;
+}
+
+/* Submit Button */
+.submit-btn {
+  background: #b57edc;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.3s ease-in-out, transform 0.2s;
+}
+
+.submit-btn:hover {
+  background: #9370db;
+  transform: scale(1.05);
+}
+
+/* Google Map */
+.map-container {
+  margin-top: 40px;
+  width: 100%;
+  height: 300px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+/* Dark Mode */
+.dark-mode {
+  background: #222;
+  color: white;
+}
+
+.dark-mode .container {
+  background: #333;
+  color: white;
+}
+
+.dark-mode input,
+.dark-mode textarea {
+  background: #444;
+  color: white;
+  border-color: #666;
+}
+
+.dark-mode-toggle {
+  position: fixed;
+  top: 90px;
+  right: 50px;
+  background: #b57edc;
+  color: white;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-size: 18px;
+  transition: background 0.3s, transform 0.3s;
+}
+
+.dark-mode-toggle:hover {
+  background: #9370db;
+  transform: scale(1.1);
+}
+
+.toast {
+  position: fixed;
+  bottom: -50px;
+  right: 20px;
+  background: #4b0082;
+  color: white;
+  padding: 15px;
+  border-radius: 5px;
+  display: none;
+  transition: bottom 0.5s ease-in-out;
+}
+
+.toast.show {
+  bottom: 20px;
+}
+
+/* Contact Actions Section */
+.contact-actions {
+  text-align: center;
+  padding: 20px;
+}
+
+/* Call to Action Buttons */
+.cta-buttons {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.cta-buttons a {
+  display: inline-block;
+  margin: 10px;
+  padding: 12px 20px;
+  background: #9370db;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.cta-buttons .whatsapp-chat {
+  background: #4caf50 !important;
+}
+
+/* FAQ Section */
+.faq-section {
+  margin-top: 30px;
+}
+
+.faq-section details {
+  margin: 10px 0;
+  cursor: pointer;
+  font-size: 18px;
+  background: #f3f1fa;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.faq-section summary {
+  cursor: pointer;
+  color: #4b0082;
+  font-weight: bold;
+  text-align: center;
+}
+@media (max-width: 768px) {
+  .vertical-contact-bar {
+    left: 5px;
+    gap: 10px;
+  }
+  .vertical-contact-bar a {
+    width: 40px;
+    height: 40px;
+    font-size: 18px;
+  }
+}
+
+/* FAQ Button - Updated Color Theme */
+.faq-btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #9370db;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.faq-btn:hover {
+  background-color: #7b68ee;
+  color: white;
+  transform: scale(1.05);
+}

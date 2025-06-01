@@ -1,0 +1,866 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Monsoon Blinds – Luxury Weather Protection Solutions</title>
+    <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+  <!-- jQuery and Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Google Font -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,600" />
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+
+  <!-- Your Custom CSS -->
+  <link rel="stylesheet" href="css/all.min.css" />
+  <link rel="stylesheet" href="css/tooplate-style.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Montserrat:wght@300;400;500;600&display=swap">
+    
+    <style>
+        :root {
+            --primary: #7E69AB;
+            --primary-light: #9f8cc0;
+            --primary-dark: #5a4782;
+            --secondary: #f8f5ff;
+            --accent: #8B5CF6;
+            --text: #1A1F2C;
+            --text-light: #4f566b;
+            --background: #ffffff;
+            --card-bg: #f9f7fd;
+            --border: #e2dcfa;
+            --gold: #d4af37;
+            --gold-light: #f0e6c9;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            color: var(--text);
+            background-color: var(--background);
+            line-height: 1.8;
+            overflow-x: hidden;
+        }
+
+        .container {
+            max-width: 1300px;
+            margin: 0 auto;
+            padding: 0 40px;
+        }
+
+        /* Header Styles */
+        header {
+            position: relative;
+            background: linear-gradient(135deg, var(--primary-dark), var(--primary), var(--primary-light));
+            color: white;
+            padding: 160px 0 120px;
+            text-align: center;
+            overflow: hidden;
+        }
+
+        header:before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"><rect width="100" height="100" fill="none"/><path d="M0,0 L100,100" stroke="rgba(255,255,255,0.1)" stroke-width="1"/></svg>') repeat;
+            opacity: 0.3;
+        }
+
+        header .container {
+            position: relative;
+            z-index: 2;
+        }
+
+        h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 3.5rem;
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+            letter-spacing: 1px;
+            line-height: 1.2;
+            text-shadow: 0px 2px 4px rgba(0,0,0,0.2);
+        }
+
+        header p {
+            font-size: 1.25rem;
+            max-width: 700px;
+            margin: 0 auto;
+            font-weight: 300;
+            color: #ffffff;
+        }
+
+        /* Section Styles */
+        section {
+            padding: 90px 0;
+            position: relative;
+        }
+
+        section:nth-child(odd) {
+            background-color: var(--secondary);
+        }
+
+        .section-content {
+            display: flex;
+            align-items: center;
+            gap: 60px;
+            margin: 20px 0;
+        }
+
+        .section-content.reverse {
+            flex-direction: row-reverse;
+        }
+
+        .text-content {
+            flex: 1;
+        }
+
+        .image-content {
+            flex: 1;
+        }
+
+        h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5rem;
+            color: var(--primary);
+            margin-bottom: 30px;
+            position: relative;
+        }
+
+        h2:after {
+            content: '';
+            display: block;
+            width: 80px;
+            height: 3px;
+            background: linear-gradient(90deg, var(--primary), var(--accent));
+            margin-top: 15px;
+        }
+
+        h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.8rem;
+            color: var(--primary-dark);
+            margin-bottom: 20px;
+        }
+
+        p {
+            margin-bottom: 20px;
+            color: var(--text-light);
+            font-size: 1.05rem;
+            line-height: 1.8;
+        }
+
+        /* Image Styles */
+        .luxury-image {
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+            transition: transform 0.5s ease, box-shadow 0.5s ease;
+            position: relative;
+        }
+
+        .luxury-image img {
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+            display: block;
+            transition: transform 0.5s;
+        }
+
+        .luxury-image:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+        }
+
+        .luxury-image:hover img {
+            transform: scale(1.05);
+        }
+
+        .image-caption {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            padding: 15px 20px;
+            background: linear-gradient(to top, rgba(0,0,0,0.7), transparent);
+            color: white;
+            font-size: 0.9rem;
+            transform: translateY(100%);
+            transition: transform 0.3s ease;
+        }
+
+        .luxury-image:hover .image-caption {
+            transform: translateY(0);
+        }
+
+        /* Feature List */
+        .feature-list {
+            margin: 30px 0;
+            list-style-type: none;
+        }
+
+        .feature-list li {
+            padding: 12px 0 12px 35px;
+            position: relative;
+            color: var(--text-light);
+            border-bottom: 1px solid var(--border);
+        }
+
+        .feature-list li:last-child {
+            border-bottom: none;
+        }
+
+        .feature-list li:before {
+            content: "✦";
+            color: var(--accent);
+            position: absolute;
+            left: 5px;
+            font-size: 1.2rem;
+        }
+
+        /* Card Styles */
+        .card-container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+            margin: 40px 0;
+        }
+
+        .card {
+            background: var(--card-bg);
+            border-radius: 10px;
+            padding: 30px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+            border: 1px solid var(--border);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+        }
+
+        .card h3 {
+            font-size: 1.4rem;
+            margin-bottom: 15px;
+            color: var(--primary-dark);
+        }
+
+        .card-icon {
+            font-size: 2rem;
+            color: var(--primary);
+            margin-bottom: 20px;
+            display: inline-block;
+        }
+
+        /* Highlight Box */
+        .highlight-box {
+            background: linear-gradient(135deg, var(--gold-light), white);
+            border-radius: 12px;
+            padding: 40px;
+            margin: 40px 0;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+            border-left: 4px solid var(--gold);
+        }
+
+        .highlight-box h3 {
+            color: var(--primary-dark);
+            margin-bottom: 15px;
+        }
+
+        /* Two Column Layout */
+        .two-columns {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 40px;
+            margin: 40px 0;
+        }
+
+       
+        .copyright {
+            margin-top: 60px;
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            color: rgba(255,255,255,0.6);
+        }
+
+        /* Scroll Animation */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.8s ease, transform 0.8s ease;
+        }
+
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Back to Top Button */
+        .back-to-top {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 50px;
+            height: 50px;
+            background-color: var(--primary);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+            opacity: 0;
+            transition: all 0.3s ease;
+            z-index: 100;
+            font-size: 1.5rem;
+        }
+
+        .back-to-top.visible {
+            opacity: 1;
+        }
+
+        .back-to-top:hover {
+            background-color: var(--primary-dark);
+            transform: translateY(-3px);
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 1024px) {
+            .container {
+                padding: 0 30px;
+            }
+            
+            h1 {
+                font-size: 3rem;
+            }
+            
+            .section-content {
+                gap: 40px;
+            }
+            
+            .card-container {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 768px) {
+            header {
+                padding: 100px 0 80px;
+            }
+            
+            h1 {
+                font-size: 2.5rem;
+            }
+            
+            h2 {
+                font-size: 2rem;
+            }
+            
+            .section-content, .section-content.reverse {
+                flex-direction: column;
+                gap: 30px;
+            }
+            
+            .luxury-image img {
+                height: 300px;
+            }
+            
+            .two-columns {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+            
+            .card-container {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .container {
+                padding: 0 20px;
+            }
+            
+            header {
+                padding: 80px 0 60px;
+            }
+            
+            h1 {
+                font-size: 2rem;
+            }
+            
+            h2 {
+                font-size: 1.8rem;
+            }
+            
+            section {
+                padding: 60px 0;
+            }
+            
+            .highlight-box {
+                padding: 25px;
+            }
+            
+            .luxury-image img {
+                height: 250px;
+            }
+        }
+    </style>
+    
+</head>
+<body>
+    <div class="container-fluid">
+        <nav class="navbar navbar-expand-lg navbar-light">
+            <h1><b>Hasa Blinds</b></h1>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item ">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="products.html">Product</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="all-cities.html">All Cities</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+     </div>
+    <header>
+        <div class="container">
+            <h1>Monsoon Blinds</h1>
+            <p>Elevating Outdoor Living with Sophisticated Protection Solutions</p>
+        </div>
+    </header>
+
+    <main>
+        <section id="introduction" class="fade-in">
+            <div class="container">
+                <h2>Redefining Outdoor Comfort</h2>
+                <div class="section-content">
+                    <div class="text-content">
+                        <p>Monsoon blinds represent the pinnacle of innovative outdoor protection technology, designed specifically for spaces that deserve to be enjoyed regardless of weather conditions. These sophisticated systems seamlessly blend functional weather protection with aesthetic enhancement, allowing you to transform exposed areas into comfortable, year-round living spaces.</p>
+                        <p>Unlike conventional blinds or awnings, monsoon blinds are engineered with transparent or semi-transparent weather-resistant materials that maintain visibility while creating an effective barrier against rain, wind, and harsh environmental elements. Their versatility makes them an ideal solution for residential balconies, coastal properties, and commercial establishments seeking to maximize usable outdoor space.</p>
+                        <p>Each installation is customized to the specific dimensions and requirements of your space, ensuring optimal protection without compromising on style or architectural integrity. The result is a sophisticated addition that enhances both the functionality and value of your property investment.</p>
+                    </div>
+                    <div class="image-content">
+                        <div class="luxury-image">
+                            <img src="img\monsoon5.webp" alt="Elegant monsoon blinds installation protecting an outdoor living area">
+                            <div class="image-caption">Premium monsoon blinds ensuring all-weather comfort</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="apartment-solutions" class="fade-in">
+            <div class="container">
+                <h2>Sophisticated Solutions for Apartment Living</h2>
+                <div class="section-content reverse">
+                    <div class="text-content">
+                        <p>For apartment dwellers, balcony spaces represent valuable square footage that often goes underutilized due to weather constraints. Monsoon blinds transform these limited outdoor areas into functional extensions of your living space, creating protected environments that can be enjoyed regardless of rain, wind, or excessive sunlight.</p>
+                        <p>The transparent nature of these systems preserves views and natural light while providing effective protection for furniture, plants, and décor elements that would otherwise require constant maintenance or indoor storage during inclement weather. This allows for permanent outdoor styling without the worry of weather damage.</p>
+                        <p>Installation in apartment settings is designed to be minimally invasive, with systems that can be fully retracted when not required. The sleek, contemporary aesthetic of monsoon blinds complements modern architectural styles while providing practical functionality that enhances your daily living experience.</p>
+                        
+                        <div class="highlight-box">
+                            <h3>Key Benefits for Apartment Balconies</h3>
+                            <ul class="feature-list">
+                                <li>Transformation of balconies into year-round usable spaces</li>
+                                <li>Protection of furniture and décor from weather damage</li>
+                                <li>Maintenance of views and natural light through transparent materials</li>
+                                <li>Creation of climate-controlled outdoor environments</li>
+                                <li>Enhancement of property value through expanded usable space</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="image-content">
+                        <div class="luxury-image">
+                            <img src="img\monsoon10.webp" alt="Apartment balcony with installed monsoon blinds">
+                            <div class="image-caption">Urban balcony transformed with weather protection</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="coastal-properties" class="fade-in">
+            <div class="container">
+                <h2>Engineered for Coastal Environments</h2>
+                <div class="section-content">
+                    <div class="text-content">
+                        <p>Coastal properties face unique environmental challenges that require specialized protection solutions. Monsoon blinds designed for beachside properties are engineered with materials specifically selected to withstand the corrosive effects of salt spray, sand abrasion, and the intense UV exposure characteristic of coastal regions.</p>
+                        <p>These systems provide essential protection during coastal storms, preventing wind-driven rain and debris from damaging outdoor living areas while maintaining the panoramic views that make beachfront properties so desirable. The ability to quickly deploy protection during sudden weather changes is particularly valuable in these dynamic environments.</p>
+                        <p>Beyond storm protection, coastal monsoon blinds function as effective barriers against everyday salt spray and fine sand particles that would otherwise accumulate on surfaces and accelerate deterioration of furniture and fixtures. This significantly reduces maintenance requirements while extending the lifespan of your outdoor investments.</p>
+                        <p>The durable construction of coastal monsoon blinds ensures they maintain both functionality and appearance despite constant exposure to harsh marine elements. Materials are selected for their resistance to yellowing, brittleness, and mechanical failure even after years of service in demanding coastal conditions.</p>
+                    </div>
+                    <div class="image-content">
+                        <div class="luxury-image">
+                            <img src="img\monsoon19.webp" alt="Coastal property with monsoon blinds protecting from sea spray">
+                            <div class="image-caption">Coastal terrace protected from salt spray and sand</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="two-columns">
+                    <div class="fade-in">
+                        <h3>Salt & Sand Protection</h3>
+                        <p>The microscopic salt particles carried by sea breezes pose a significant threat to outdoor furnishings, causing accelerated corrosion of metal components and degradation of fabrics and finishes. Similarly, windblown sand creates constant abrasion that wears down surfaces and penetrates mechanical systems.</p>
+                        <p>Monsoon blinds create an effective barrier against these elements, significantly reducing salt deposits and sand accumulation in protected areas. The materials used are non-porous and easily cleaned, preventing the buildup of salt residue that would otherwise require frequent and intensive maintenance.</p>
+                    </div>
+                    <div class="fade-in">
+                        <h3>Wind Resistance Technology</h3>
+                        <p>Coastal installations incorporate advanced wind resistance technology with reinforced tracking systems and tensioning mechanisms that maintain stability even during high wind conditions. This prevents the rattling, flapping, or billowing that would compromise both functionality and longevity.</p>
+                        <p>Strategic venting options can be incorporated to manage air pressure differentials during extreme weather events, allowing controlled airflow while maintaining protection against precipitation and debris. This balanced approach ensures maximum durability in challenging coastal environments.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="commercial-applications" class="fade-in">
+            <div class="container">
+                <h2>Enhancing Commercial Hospitality Spaces</h2>
+                <div class="section-content reverse">
+                    <div class="text-content">
+                        <p>For restaurants, cafés, and hospitality venues, outdoor dining areas represent significant revenue potential that is often subject to weather limitations. Monsoon blinds transform these spaces into reliable, all-weather dining environments that can be confidently booked and utilized regardless of forecast conditions.</p>
+                        <p>The protection provided extends beyond customer comfort to safeguard expensive outdoor furniture, service equipment, and décor elements from weather damage, reducing replacement frequency and maintenance costs. Meanwhile, the transparent or semi-transparent materials preserve the open-air ambiance that attracts customers to outdoor dining experiences.</p>
+                        <p>In urban environments, these systems offer the additional benefit of reducing street noise and creating more intimate dining atmospheres, while also providing privacy from passersby without sacrificing natural light or views. This enhanced dining experience can significantly improve customer satisfaction and review ratings.</p>
+                        <p>From an operational perspective, the temperature regulation properties of monsoon blinds help extend the seasonal usability of outdoor spaces, reducing heating requirements in cooler weather while providing shade protection during warmer periods. This expanded operating window translates directly to increased seating capacity and revenue potential throughout the year.</p>
+                    </div>
+                    <div class="image-content">
+                        <div class="luxury-image">
+                            <img src="img\monsoon14.webp" alt="Restaurant outdoor seating area protected by monsoon blinds">
+                            <div class="image-caption">All-weather dining space protected by premium blinds</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="operational-mechanics" class="fade-in">
+            <div class="container">
+                <h2>Sophisticated Operating Systems</h2>
+                <p>Modern monsoon blind installations offer multiple operational approaches to suit different requirements and preferences. Each system is engineered for reliability, ease of use, and seamless integration with your lifestyle or business operations.</p>
+                
+                <div class="card-container">
+                    <div class="card fade-in">
+                        <span class="card-icon">⚙️</span>
+                        <h3>Manual Systems</h3>
+                        <p>Traditional manual systems utilize precision-engineered pulley mechanisms, rope pulls, or crank handles to deploy and retract the protective screens. These systems offer reliable operation without dependency on power sources, making them particularly suitable for areas without convenient electrical access.</p>
+                        <p>Advanced gear mechanisms ensure smooth operation with minimal effort, while high-quality components provide years of reliable service with proper maintenance. The tactile nature of manual operation provides direct control over positioning and tension adjustment.</p>
+                    </div>
+                    
+                    <div class="card fade-in">
+                        <span class="card-icon">🔋</span>
+                        <h3>Motorized Systems</h3>
+                        <p>Electric motor-driven systems offer enhanced convenience through remote control operation, allowing quick response to changing weather conditions from anywhere within the property. Premium installations include weather sensors that automatically deploy protection when rain or high winds are detected.</p>
+                        <p>Integration with smart home systems enables scheduled operation, voice control functionality, and synchronization with other automated features. Battery backup options ensure continued operation during power outages when protection is most likely to be needed.</p>
+                    </div>
+                    
+                    <div class="card fade-in">
+                        <span class="card-icon">🔄</span>
+                        <h3>Hybrid Solutions</h3>
+                        <p>Semi-automatic systems combine the convenience of motorized operation with manual override capabilities, ensuring reliable protection regardless of power availability. These versatile systems represent the optimal balance between convenience and operational reliability.</p>
+                        <p>Solar-powered options reduce energy consumption while providing the convenience of automated operation, making them particularly suitable for sustainability-conscious installations or remote locations where power access is limited.</p>
+                    </div>
+                </div>
+                
+                <div class="section-content">
+                    <div class="text-content">
+                        <h3>Material Technology</h3>
+                        <p>The performance of monsoon blinds is largely determined by the sophisticated materials used in their construction. Each material offers specific benefits that may be prioritized based on the installation environment and intended use profile:</p>
+                        
+                        <ul class="feature-list">
+                            <li><strong>PVC Crystal:</strong> Offers exceptional optical clarity with up to 90% transparency, providing virtually unobstructed views while delivering superior water resistance and durability. Premium formulations incorporate UV stabilizers to prevent yellowing and ensure longevity in sun-exposed installations.</li>
+                            <li><strong>Acrylic Panels:</strong> Provide increased rigidity and superior scratch resistance compared to PVC, with excellent optical properties and resistance to yellowing even in intense UV exposure. These materials maintain their clarity and mechanical properties for extended periods in challenging environments.</li>
+                            <li><strong>HDPE Mesh:</strong> Offers improved airflow while still providing effective protection from precipitation and debris. The semi-transparent nature provides a balance of privacy and visibility while diffusing harsh sunlight for improved comfort.</li>
+                            <li><strong>Composite Materials:</strong> Advanced multi-layer constructions combine the benefits of different materials to achieve optimal performance characteristics, with specialized coatings for enhanced water shedding, anti-static properties, or improved cleaning characteristics.</li>
+                        </ul>
+                    </div>
+                    <div class="image-content">
+                        <div class="luxury-image">
+                            <img src="img\mo (14).jpg" alt="Close-up of monsoon blind components and installation">
+                            <div class="image-caption">Precision engineering of monsoon blind components</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="component-architecture" class="fade-in">
+            <div class="container">
+                <h2>Precision-Engineered Component Architecture</h2>
+                <div class="section-content reverse">
+                    <div class="text-content">
+                        <p>Every monsoon blind system represents an integrated assembly of precision-engineered components working in harmony to provide reliable protection and operation. Understanding these key elements provides insight into the sophisticated engineering behind these seemingly simple systems:</p>
+                        
+                        <div class="highlight-box">
+                            <h3>Essential System Components</h3>
+                            <ul class="feature-list">
+                                <li><strong>Screen Material:</strong> The protective barrier itself, selected for specific performance characteristics including transparency, durability, and weather resistance.</li>
+                                <li><strong>Roller Tube Assembly:</strong> Houses the retraction mechanism and provides even tension across the width of the installation. Precision-balanced for smooth operation and longevity.</li>
+                                <li><strong>Side Channel Guides:</strong> Provide stability against wind pressure and ensure consistent operation of the blind material through various weather conditions.</li>
+                                <li><strong>Bottom Bar:</strong> Provides proper tensioning of the material when extended and incorporates sealing elements to prevent water ingress at the lower boundary.</li>
+                                <li><strong>Control Mechanism:</strong> Whether manual or motorized, this component provides the interface for system operation and adjustment to various positions.</li>
+                                <li><strong>Weather Sealing:</strong> Specialized components that create weather-tight seals when the system is fully deployed, preventing water penetration even during driving rain.</li>
+                            </ul>
+                        </div>
+                        
+                        <p>These components are fabricated from materials specifically selected for their performance characteristics in outdoor environments. Marine-grade aluminum extrusions, stainless steel fasteners and mechanisms, and UV-stabilized polymers ensure longevity even in challenging coastal or urban environments.</p>
+                    </div>
+                    <div class="image-content">
+                        <div class="luxury-image">
+                            <img src="img\ro1.jpg" alt="Detailed view of monsoon blind components">
+                            <div class="image-caption">Engineered components ensuring reliable protection</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="two-columns">
+                    <div class="fade-in">
+                        <h3>Installation Architecture</h3>
+                        <p>Professional installation ensures that mounting points properly distribute loads to the supporting structure, with appropriate reinforcement where necessary. Weather sealing at attachment points prevents water penetration into the building envelope, protecting structural elements from moisture damage.</p>
+                        <p>Each installation is customized to the specific dimensions and architectural features of the space, with careful consideration of access requirements, existing features, and aesthetic integration with the overall design language of the property.</p>
+                    </div>
+                    <div class="fade-in">
+                        <h3>Maintenance Design</h3>
+                        <p>Components are designed with maintenance accessibility in mind, allowing for periodic inspection and servicing to ensure continued optimal performance. Self-cleaning features incorporated into modern designs reduce maintenance frequency while preserving optical clarity and system functionality.</p>
+                        <p>Replacement parts are engineered for standardization across product lines, ensuring long-term availability and serviceability throughout the extended lifespan of the installation. This sustainable approach reduces lifetime ownership costs and environmental impact.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="manufacturing-process" class="fade-in">
+            <div class="container">
+                <h2>Advanced Manufacturing Processes</h2>
+                <p>The creation of monsoon blinds involves sophisticated manufacturing processes that combine material science with precision fabrication techniques to ensure exceptional performance and longevity in demanding outdoor environments.</p>
+                
+                <div class="section-content">
+                    <div class="text-content">
+                        <p>Core material production begins with the formulation of specialized polymer blends incorporating UV stabilizers, optical clarifiers, and mechanical performance enhancers. These formulations undergo rigorous testing to ensure they meet or exceed industry standards for weather resistance, mechanical durability, and optical properties.</p>
+                        <p>The extrusion process transforms these raw polymer blends into continuous sheets with precisely controlled thickness, optical clarity, and surface characteristics. Advanced quality control systems monitor the production in real-time, making minute adjustments to ensure consistent quality throughout each production run.</p>
+                        <p>For PVC and acrylic components, specialized post-production treatments enhance water repellency and resistance to environmental contaminants, reducing maintenance requirements while improving functional performance. These treatments are chemically bonded to the material surface for extended durability.</p>
+                        <p>Hardware components undergo equally rigorous manufacturing processes, with marine-grade aluminum extrusions and stainless steel mechanisms designed specifically for outdoor applications. Anodizing and powder coating processes provide additional protection against corrosion while offering aesthetic customization options.</p>
+                        <p>Final assembly integrates these precision components into complete systems that undergo comprehensive testing under simulated extreme weather conditions to verify performance parameters including water resistance, wind loading capacity, and operational reliability over thousands of cycles.</p>
+                    </div>
+                    <div class="image-content">
+                        <div class="luxury-image">
+                            <img src="img\s (1).jpg" alt="Manufacturing facility producing monsoon blind components">
+                            <div class="image-caption">Precision manufacturing of weather protection systems</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section id="product-range" class="fade-in">
+            <div class="container">
+                <h2>Comprehensive Product Range</h2>
+                <p>Our extensive range of monsoon blind systems encompasses multiple design variations to address diverse architectural requirements and performance priorities:</p>
+                
+                <div class="card-container">
+                    <div class="card fade-in">
+                        <span class="card-icon">🌧️</span>
+                        <h3>Roller Monsoon Blinds</h3>
+                        <p>The classic vertical deployment system, featuring a top-mounted roller tube with side channel guides. This design provides exceptional water resistance and wind stability while maintaining a sleek, minimalist aesthetic that integrates seamlessly with contemporary architecture.</p>
+                    </div>
+                    
+                    <div class="card fade-in">
+                        <span class="card-icon">🎋</span>
+                        <h3>Bamboo Monsoon Blinds</h3>
+                        <p>Combining traditional aesthetics with modern performance, these systems incorporate natural bamboo elements with weather-resistant backing. The result is a warm, organic appearance with the full functionality of conventional monsoon blinds.</p>
+                    </div>
+                    
+                    <div class="card fade-in">
+                        <span class="card-icon">↕️</span>
+                        <h3>Vertical Monsoon Blinds</h3>
+                        <p>Designed for spaces where traditional roller systems are impractical, vertical systems deploy from side housings to meet in the center. This alternative approach provides flexible configuration options for complex architectural spaces.</p>
+                    </div>
+                </div>
+                
+                <div class="highlight-box">
+                    <h3>Customization Options</h3>
+                    <div class="two-columns">
+                        <ul class="feature-list">
+                            <li><strong>Material Transparency:</strong> Select from crystal clear, lightly tinted, or privacy-enhancing options</li>
+                            <li><strong>Frame Finishes:</strong> Choose from powder-coated aluminum in custom colors or premium wood-look finishes</li>
+                            <li><strong>Operation Mode:</strong> Manual, motorized, smart-home integrated, or hybrid systems</li>
+                            <li><strong>Weather Sensors:</strong> Optional rain, wind, and temperature monitoring systems</li>
+                        </ul>
+                        <ul class="feature-list">
+                            <li><strong>Integrated Lighting:</strong> Optional LED lighting systems built into the framework</li>
+                            <li><strong>Heating Elements:</strong> Optional infrared heating for cooler evenings</li>
+                            <li><strong>Privacy Gradients:</strong> Variable transparency options from clear to translucent</li>
+                            <li><strong>Sound Dampening:</strong> Enhanced acoustic performance for urban environments</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section id="installation-process" class="fade-in">
+            <div class="container">
+                <h2>Professional Installation Process</h2>
+                <div class="section-content reverse">
+                    <div class="text-content">
+                        <p>The journey to enhancing your outdoor spaces with monsoon blinds begins with a comprehensive consultation process focused on understanding your specific requirements, environmental challenges, and aesthetic preferences. Our experienced design consultants evaluate the architectural characteristics of your space to recommend optimal solutions.</p>
+                        <p>Following the consultation, precise measurements are taken using advanced laser measurement technology to ensure perfect fit and functionality. These measurements inform the custom fabrication process, where each component is manufactured specifically for your installation.</p>
+                        <p>Professional installation by certified technicians ensures proper mounting, alignment, and operation of your system. Our installation teams are trained in both technical aspects and aesthetic considerations, ensuring minimal disruption to your property while achieving optimal results.</p>
+                        <p>Upon completion, a comprehensive demonstration and operation review provides you with complete confidence in managing your new monsoon blind system. This includes maintenance recommendations, warranty information, and contact details for ongoing support.</p>
+                    </div>
+                    <div class="image-content">
+                        <div class="luxury-image">
+                            <img src="img\t3.jpg" alt="Professional installation of monsoon blinds">
+                            <div class="image-caption">Professional installation by certified technicians</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+     <!-- Fixed Contact -->
+<div class="vertical-contact-bar">
+    <a href="https://api.whatsapp.com/send?phone=916380655921&text=Hey%20Hasa%20Blinds,%20can%20you%20share%20me%20more%20details,%20I%20am%20located%20at" target="_blank" class="whatsapp">
+      <i class="fab fa-whatsapp"></i>
+    </a>
+    <a href="tel:+916379499902" class="phone">
+      <i class="fas fa-phone"></i>
+    </a>
+    <a href="mailto:info@Hasablinds.com" class="email">
+      <i class="fas fa-envelope"></i>
+    </a>
+  </div>
+  <footer>
+    <div class="container">
+      <div class="footer-container">
+        <div class="footer-col">
+          <h3>Hasa Blinds</h3>
+          <p>
+            Established in 2007, we provide high-quality monsoon blinds 
+            designed to protect outdoor spaces from various weather elements.
+          </p>
+        </div>
+        
+        <div class="footer-col">
+          <h3>Quick Links</h3>
+          <ul class="footer-links">
+            <li><a href="/">Home</a></li>
+            <li><a href="/about">About Us</a></li>
+            <li><a href="/product">Our Products</a></li>
+            <li><a href="/contact">Contact Us</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-col">
+          <h3>Our Locations</h3>
+          <ul class="footer-links">
+            <li>Bangalore</li>
+            <li>Hyderabad</li>
+            <li>Chennai</li>
+            <li>Coimbatore</li>
+          </ul>
+        </div>
+        
+        <div class="footer-col">
+          <h3>Contact Info</h3>
+          <ul class="footer-links">
+            <li><i class="fas fa-phone"></i> +91 98765 43210</li>
+            <li><i class="fas fa-envelope"></i> info@Hasablinds.com</li>
+            <li><i class="fas fa-map-marker-alt"></i> Bangalore, India</li>
+          </ul>
+          <div class="social-links">
+            <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+            <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+    <div class="back-to-top">↑</div>
+
+    <script>
+        // Fade in animation for sections
+        const fadeElements = document.querySelectorAll('.fade-in');
+        const observerOptions = {
+            threshold: 0.15,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+
+        fadeElements.forEach(element => {
+            observer.observe(element);
+        });
+
+        // Back to top button
+        const backToTopButton = document.querySelector('.back-to-top');
+        
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset > 300) {
+                backToTopButton.classList.add('visible');
+            } else {
+                backToTopButton.classList.remove('visible');
+            }
+        });
+        
+        backToTopButton.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+                
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
